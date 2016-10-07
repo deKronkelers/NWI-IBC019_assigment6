@@ -11,6 +11,27 @@
 \maketitle
 
 \section*{8.1}
+\begin{enumerate}[a]
+	\item %a
+	The virtual address is split into a page number, a frame number, control bits, and an offset.
+
+	The page number is used by the MMU to look up the physical address of the page in the page table. The frame number is added as an offset ontop of this to get the physical address of the frame which is then used together with the offset to determine the physical location of the virtual address.
+
+	\item %b
+	Because it is not explicitly stated I assume the the first number is the virtual page number and the number after the comma is the offset. I used the page size to determine
+
+	\begin{enumerate}[i]
+		\item %i
+		The physical address is $7 * 1024 + 52 = 7220$.
+
+		\item %ii
+		There is no physical address for this virtual address as the valid bit is set to $0$ and the page frame number is empty.
+
+		\item %iii
+		The physical address is $0 * 1024 + 499 = 499$.
+	\end{enumerate}
+\end{enumerate}
+
 \section*{8.2}
 \section*{8.4}
 
