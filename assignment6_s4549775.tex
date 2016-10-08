@@ -60,6 +60,8 @@
 	It loops through the columns rather than the rows and so on each $4$th iteration we get $3$ page faults (one for each array). There is a total of $64^2$ iterations so there is a total of $\frac{64^2}{4} * 3 = 3072$ page faults.
 
 	\item %b
+	The program could be significantly improved by iterating over the rows rather then the columns. This can be done by swapping the $i$ and $j$ looping variables.
+
 	\item %c
 \end{enumerate}
 
