@@ -53,6 +53,12 @@
 
 \begin{enumerate}[a]
 	\item %a
+	The process has a $4$ page working set and one page is occupied by the program code itself so we have $3$ pages left for the data. On each step we need all $3$ arrays so we can only load one page of each into the working set at any time.
+
+	Because of the way the arrays are split up into pages (see schema above) you can access, for exmaple, A[0; 0] upto A[3, 63] without a page fault but the program given does not acess them in this order.
+
+	It loops through the columns rather than the rows and so on each $4$th iteration we get $3$ page faults (one for each array). There is a total of $64^2$ iterations so there is a total of $\frac{64^2}{4} * 3 = 3072$ page faults.
+
 	\item %b
 	\item %c
 \end{enumerate}
