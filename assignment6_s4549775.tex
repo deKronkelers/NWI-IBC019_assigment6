@@ -63,6 +63,9 @@
 	The program could be significantly improved by iterating over the rows rather then the columns. This can be done by swapping the $i$ and $j$ looping variables.
 
 	\item %c
+	The schema shows that we only get page faults every four rows when iterating over the rows. This means we only get $3$ page faults every $64 * 4 = 256$ iterations.
+
+	Switching $i$ and $j$ reduces the number of page faults to $\frac{64^2}{256} * 3 = 48$.
 \end{enumerate}
 
 \section*{8.4}
