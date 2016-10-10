@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage{amssymb}
+\usepackage{amssymb, amsmath}
 \usepackage{multicol}
 \usepackage{enumerate}
 
@@ -535,6 +535,17 @@ I assume that we also have a $3$ page set as in figure 8.15 from the book so thi
 		\end{description}
 	\end{multicols}
 	\item %e
+	\begin{tabular}{c|c|c}
+		method & page faults & miss rate\\
+		\hline
+		FIFO & 7 & $\dfrac{7}{13} = 53.8\%$\\
+		\hline
+		LRU & 6 & $\dfrac{}{13} = 46.2\%$\\
+		\hline
+		Clock & & $\dfrac{?}{13} = ?\%$\\
+		\hline
+		Optimal & 4 & $\dfrac{4}{13} = 30.8\%$\\
+	\end{tabular}
 \end{enumerate}
 
 \end{document}
